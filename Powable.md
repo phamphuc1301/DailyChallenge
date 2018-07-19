@@ -22,15 +22,15 @@ both should be integers.
 ```
    public static boolean checkPowable(int number) {
     int sqrt = (int) Math.sqrt(number);
-    for(int i = 2;i<=sqrt ; i++) {
-      int y = 1;
+    for(int a = 2;a<=sqrt ; a++) {
+      int p = 1;
       int pow = 0;
       do {
-        pow = (int) Math.pow(i, y);
+        pow = (int) Math.pow(a, p);
         if(pow == number) {
           return true;
         }
-        y++;
+        p++;
       } while (pow<number);
     }
     return false;
