@@ -12,7 +12,7 @@ Example:
   ABC -> 731
   AAAA -> 18279
 ```
-### Solution 1
+### Solution 1 - As hell
 private static Map<Character, Integer> map = new TreeMap<>();
 #### Step 1
    Define map has key is Character such as "A","B"..."Z" and value is a number
@@ -40,5 +40,15 @@ private static Map<Character, Integer> map = new TreeMap<>();
       root += map.get(arrChar[i]) * Math.pow(26, i);
     }
     return root;
+  }
+  ```
+  ### Solution 2 - masterpiece
+  ```
+    public static int solution2(String strColumnVal) {
+    int result = 0;
+    for (int i = 0; i < strColumnVal.length(); i++) {
+      result = result*26 + (int)(strColumnVal.charAt(i)-'A' +1);
+    }
+    return result;
   }
   ```
